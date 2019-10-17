@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="3"
+    name="ThomasFragment"
+    description="Creates a new basic thomas fragment"
+    minApi="7"
+    minBuildApi="8">
+
+    <category value="Fragment" />
+
+   <parameter
+        id="pageName"
+        name="Page Name"
+        type="string"
+        constraints="unique|nonempty"
+       
+        default="Main"
+        help="请填写页面名,如填写 Main,会自动生成 MainFragment, MainPresenter 等文件" />
+
+    <parameter
+            id="packageName"
+            name="Root Package Name"
+            type="string"
+            constraints="package"
+            default="com.mycompany.myapp"
+            help="请填写你的项目包名,请认真核实此包名是否是正确的项目包名,不能包含子包"
+            />
+			
+    <parameter
+        id="needMVP"
+        name="Generate MVP"
+        type="boolean"
+        default="true"
+        help="是否需要使用 MVP ? 不勾选则不生成" />
+
+    <thumbs>
+        <thumb>template_blank_fragment.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
