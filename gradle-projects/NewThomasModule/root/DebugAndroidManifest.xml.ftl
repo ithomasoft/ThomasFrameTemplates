@@ -14,7 +14,6 @@
         android:name="com.thomas.sdk.Thomas"
         android:allowBackup="false"
      android:icon="@mipmap/ic_launcher"
-        android:label="@string/${projectName}_app_name"
        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/thomas_AppTheme">
@@ -26,8 +25,8 @@
             android:value=""/>
 		
         <meta-data
-            android:name="${packageName}.app.GlobalConfiguration"
-            android:value="ConfigModule"/>		
+            android:name="${packageName}.app.ModuleConfiguration"
+            android:value="ModuleConfig"/>		
 			
 	</application>
 

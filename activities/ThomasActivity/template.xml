@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <template
     format="5"
-    revision="5"
+    revision="1"
     name="Thomas Activity"
     minApi="9"
-    minBuildApi="14"
+    minBuildApi="15"
     description="Creates a new basic thomas activity">
 
     <category value="Activity" />
-    <formfactor value="Things" />
+    <formfactor value="Mobile" />
 
     <parameter
         id="pageName"

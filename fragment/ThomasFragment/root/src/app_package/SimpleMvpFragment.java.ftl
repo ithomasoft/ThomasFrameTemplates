@@ -53,7 +53,7 @@ public class ${pageName}Fragment extends ThomasMvpFragment<${pageName}Presenter>
     }
 	
 	@Override
-    public void onFailed(String failed) {
+    public void onFailed(Object tag,String failed) {
         
     }
 

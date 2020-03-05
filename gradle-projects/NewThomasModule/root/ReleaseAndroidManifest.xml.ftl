@@ -5,7 +5,7 @@
     <application>
    		
         <meta-data
-            android:name="${packageName}.app.GlobalConfiguration"
-            android:value="ConfigModule"/>
+            android:name="${packageName}.app.ModuleConfiguration"
+            android:value="ModuleConfig"/>
     </application>
 </manifest>

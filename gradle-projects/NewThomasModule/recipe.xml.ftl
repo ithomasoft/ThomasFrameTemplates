@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <recipe>
     <mkdir at="${escapeXmlAttribute(projectOut)}/libs" />
+	<mkdir at="${escapeXmlAttribute(resOut)}/anim" />
     <mkdir at="${escapeXmlAttribute(resOut)}/drawable" />
 	 <mkdir at="${escapeXmlAttribute(resOut)}/layout" />
 	<mkdir at="${escapeXmlAttribute(resOut)}/mipmap-hdpi" />
@@ -32,11 +33,14 @@
                    to="${projectOut}/src/main/java/${slashedPackageName(packageName)}/ApiConstant.java" />
     <instantiate from="root/src/ConstantValues.java.ftl"
                    to="${projectOut}/src/main/java/${slashedPackageName(packageName)}/ConstantValues.java" />
-    <instantiate from="root/src/GlobalParams.java.ftl"
-                   to="${projectOut}/src/main/java/${slashedPackageName(packageName)}/GlobalParams.java" />
+    <instantiate from="root/src/ModuleParams.java.ftl"
+                   to="${projectOut}/src/main/java/${slashedPackageName(packageName)}/ModuleParams.java" />
 				   
-	<instantiate from="root/src/GlobalConfiguration.java.ftl"
-                   to="${projectOut}/src/main/java/${slashedPackageName(packageName)}/app/GlobalConfiguration.java" />
+	<instantiate from="root/src/ModuleConfiguration.java.ftl"
+                   to="${projectOut}/src/main/java/${slashedPackageName(packageName)}/app/ModuleConfiguration.java" />
+	
+	<instantiate from="root/src/AppLifecyclesImpl.java.ftl"
+                   to="${projectOut}/src/main/java/${slashedPackageName(packageName)}/app/AppLifecyclesImpl.java" />
 
     <instantiate from="root/res/values/strings.xml.ftl"
                    to="${escapeXmlAttribute(resOut)}/values/strings.xml" />
@@ -46,12 +50,9 @@
   
     <copy from="root/res/values/colors.xml"
                 to="${escapeXmlAttribute(resOut)}/values/colors.xml" />
- 
 
-<#if makeIgnore>
     <copy from="root://gradle-projects/common/gitignore"
             to="${escapeXmlAttribute(projectOut)}/.gitignore" />
-</#if>
 
     <#include "root://gradle-projects/common/proguard_recipe.xml.ftl"/>
 

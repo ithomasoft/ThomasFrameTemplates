@@ -8,6 +8,7 @@
     minBuildApi="8">
 
     <category value="Fragment" />
+	 <formfactor value="Mobile" />
 
    <parameter
         id="pageName"

@@ -22,7 +22,7 @@ import butterknife.BindView;
  * @since
  */
 @Route(path = "")//TODO 添加路由path
-public class ${pageName}Activity extends DrumMvpActivity<${pageName}Presenter> implements ${pageName}Contract.View{
+public class ${pageName}Activity extends ThomasMvpActivity<${pageName}Presenter> implements ${pageName}Contract.View{
    
    
    
@@ -57,7 +57,7 @@ public class ${pageName}Activity extends DrumMvpActivity<${pageName}Presenter> i
     }
 
     @Override
-    public void onFailed(String failed) {
+    public void onFailed(Object tag,String failed) {
         
     }
 
